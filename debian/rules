@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+override_dh_auto_configure:
+	./configure						\
+		--includedir=/usr/include			\
+		--libdir=/usr/lib/$(DEB_HOST_MULTIARCH)		\
+		--mandir=/usr/share/man				\
+		--prefix=/usr					\
+		--cores=2					\
+		--disable-sse
+
+override_dh_auto_test:
+	make -j1 check
+
+%:
+	dh $@
+
+# The build target must not be empty.  Sadly because of how make
+# works, we have do duplicate the target in this case.
+build:
+	dh $@
+
+.PHONY: build
+

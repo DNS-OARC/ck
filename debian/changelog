@@ -1,0 +1,86 @@
+ck (0.6.0-1.2~bpo10+1) buster-backports; urgency=medium
+
+  * Rebuild for buster-backports.
+  * Add myself to Uploaders for backports.
+
+ -- Dominik George <natureshadow@debian.org>  Tue, 26 Nov 2019 11:10:23 +0100
+
+ck (0.6.0-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Backport upstream patch to disable SSE on x86. (Closes: #906697)
+
+ -- Dominik George <natureshadow@debian.org>  Thu, 21 Nov 2019 09:38:52 +0100
+
+ck (0.6.0-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Apply patch from Niels Thykier to fix FTBFS with
+    debhelper >= 11.1. (Closes: #888591)
+
+ -- Adrian Bunk <bunk@debian.org>  Sat, 24 Feb 2018 21:32:28 +0200
+
+ck (0.6.0-1) unstable; urgency=medium
+
+  * New upstream version 0.6.0
+
+ -- Robert Edmonds <edmonds@debian.org>  Fri, 10 Mar 2017 18:38:50 -0500
+
+ck (0.5.2-2) unstable; urgency=medium
+
+  * debian/control: Only build on architectures supported by upstream
+  * debian/rules: Limit tests to 2 cores (Closes: #764827)
+  * debian/gbp.conf: New (enable pristine-tar, pristine-tar-commit)
+
+ -- Robert Edmonds <edmonds@debian.org>  Thu, 29 Dec 2016 16:59:42 -0500
+
+ck (0.5.2-1) unstable; urgency=medium
+
+  * New upstream version 0.5.2 (Closes: #813145)
+  * debian/control: Update Maintainer (Closes: #848656)
+  * debian/control: Use HTTPS Vcs-* URLs
+  * debian/control: Standards-Version 3.9.8 (no changes)
+  * debian/control: Build-Depend on debhelper 10
+  * debian/compat: Compat level 10
+  * debian/copyright: BSD -> BSD-2-clause (Fixes Lintian
+    "invalid-short-name-in-dep5-copyright")
+  * debian/copyright: Remove Source header (dead link)
+  * debian/copyright: Correct path to include/gcc/x86_64/ck_pr_rtm.h (Fixes
+    Lintian "wildcard-matches-nothing-in-dep5-copyright ck_pr_rtm",
+    "unused-file-paragraph-in-dep5-copyright")
+  * debian/watch: Add watch file for GitHub releases
+  * debian/source/: Use 3.0 (quilt) source format, plus options and patch
+    header
+
+ -- Robert Edmonds <edmonds@debian.org>  Wed, 21 Dec 2016 18:59:51 -0500
+
+ck (0.4.4-2) unstable; urgency=low
+
+  * Update maintainer to Debian QA up (orphaning the package)
+
+ -- Daniel Pocock <daniel@pocock.pro>  Mon, 19 Dec 2016 10:07:18 +0100
+
+ck (0.4.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Daniel Pocock <daniel@pocock.pro>  Wed, 10 Sep 2014 22:16:03 +0200
+
+ck (0.4.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Daniel Pocock <daniel@pocock.pro>  Sat, 02 Aug 2014 16:28:29 +0200
+
+ck (0.4.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fixes some build issues for non-Intel platforms.
+
+ -- Daniel Pocock <daniel@pocock.pro>  Fri, 02 May 2014 09:17:48 +0200
+
+ck (0.3.5-1) unstable; urgency=low
+
+  * Initial packaging (Closes: #740392)
+
+ -- Daniel Pocock <daniel@pocock.com.au>  Fri, 28 Feb 2014 23:48:09 +0100

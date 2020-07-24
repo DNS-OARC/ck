@@ -1,0 +1,30 @@
+Source: ck
+Section: libs
+Priority: optional
+Maintainer: Robert Edmonds <edmonds@debian.org>
+Uploaders: Dominik George <natureshadow@debian.org>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 3.9.8
+Homepage: http://concurrencykit.org/
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/ck.git
+Vcs-Git: https://anonscm.debian.org/git/collab-maint/ck.git
+
+Package: libck0
+Architecture: amd64 arm64 armhf i386 ppc64el
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Concurrency Kit - shared libraries
+ Concurrency primitives, safe memory reclamation mechanisms and
+ non-blocking data structures designed to aid in the research,
+ design and implementation of high performance concurrent systems.
+
+Package: libck-dev
+Section: libdevel
+Architecture: amd64 arm64 armhf i386 ppc64el
+Depends: libck0 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: Concurrency Kit - development files
+ Concurrency primitives, safe memory reclamation mechanisms and
+ non-blocking data structures designed to aid in the research,
+ design and implementation of high performance concurrent systems.
+ .
+ This package provides header files needed by developers.
