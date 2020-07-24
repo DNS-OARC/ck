@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Robert Edmonds <edmonds@debian.org>
 Uploaders: Dominik George <natureshadow@debian.org>
-Build-Depends: debhelper (>= 10)
+Build-Depends: debhelper (>= 10), libc6-dev
 Standards-Version: 3.9.8
 Homepage: http://concurrencykit.org/
 Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/ck.git
