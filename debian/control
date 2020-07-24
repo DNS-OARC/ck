@@ -3,14 +3,14 @@ Section: libs
 Priority: optional
 Maintainer: Robert Edmonds <edmonds@debian.org>
 Uploaders: Dominik George <natureshadow@debian.org>
-Build-Depends: debhelper (>= 10), libc6-dev
+Build-Depends: debhelper (>= 10)
 Standards-Version: 3.9.8
 Homepage: http://concurrencykit.org/
 Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/ck.git
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/ck.git
 
 Package: libck0
-Architecture: i386
+Architecture: amd64 i386
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Concurrency Kit - shared libraries
@@ -20,7 +20,7 @@ Description: Concurrency Kit - shared libraries
 
 Package: libck-dev
 Section: libdevel
-Architecture: i386
+Architecture: amd64 i386
 Depends: libck0 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Description: Concurrency Kit - development files
  Concurrency primitives, safe memory reclamation mechanisms and
