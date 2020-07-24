@@ -1,13 +1,23 @@
 #!/usr/bin/make -f
 
 override_dh_auto_configure:
+	if [ "$(DEB_HOST_MULTIARCH)" = "i386-linux-gnu" ]; then \
 	./configure						\
 		--includedir=/usr/include			\
 		--libdir=/usr/lib/$(DEB_HOST_MULTIARCH)		\
 		--mandir=/usr/share/man				\
 		--prefix=/usr					\
 		--cores=2					\
-		--disable-sse
+		--disable-sse --platform=i686; \
+	else \
+	./configure						\
+		--includedir=/usr/include			\
+		--libdir=/usr/lib/$(DEB_HOST_MULTIARCH)		\
+		--mandir=/usr/share/man				\
+		--prefix=/usr					\
+		--cores=2					\
+		--disable-sse; \
+	fi
 
 override_dh_auto_test:
 	make -j1 check
